@@ -1,9 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { ClientText } from "@/components/ClientText/ClientText";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <ClientText />
       <main className={styles.main}>
         <Image
           className={styles.logo}
