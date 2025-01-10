@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { ClientText } from "@/components/ClientText/ClientText";
+import { ClientText } from "@/components/ServerText/ServerText";
 
 export default function Home() {
   return (

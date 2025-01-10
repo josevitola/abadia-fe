@@ -1,8 +1,8 @@
 import styles from "@/app/page.module.css";
-import { ClientText } from "@/components/ClientText/ClientText";
+import { ClientText } from "@/components/ServerText/ServerText";
 
 type PageProps = {
-    params: { id: string };
+    params: Promise<{ id: string }>;
 }
 
 export default async function Home({ params }: PageProps) {
