@@ -33,3 +33,9 @@ export type Book = {
   isbn10?: number;
   isbn13?: number;
 };
+
+export type BasicText = Pick<Text, 'id' | 'title' | 'authors'>;
+
+export type BasicBook = Pick<Book, 'id' | 'title'> & {
+  texts: BasicText[];
+};

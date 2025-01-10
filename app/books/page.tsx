@@ -1,9 +1,11 @@
 import styles from "@/app/page.module.css";
+import { ServerBookList } from "@/components/ServerBookList/ServerBookList";
 
-export default function Home() {
+export default async function Home() {
     return (
         <div className={styles.page}>
-            <h1>Books</h1>
+            <h1>Book list</h1>
+            <ServerBookList />
         </div>
     );
 }

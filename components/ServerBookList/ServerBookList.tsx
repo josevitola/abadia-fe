@@ -1,10 +1,12 @@
 import { getClient } from "@/lib/apollo/client";
-import { Book, Human, Text } from "@/types";
+import { BasicBook, Book, Human, Text } from "@/types";
 import { gql } from "@apollo/client";
+import BookCard from "../BookCard/BookCard";
 
 const GET_BOOK_INFO = gql`
     query Books {
         books {
+            id
             title
             texts {
                 id
@@ -18,9 +20,7 @@ const GET_BOOK_INFO = gql`
 `;
 
 type QueryTextTitleAndAuthorsByIdResponse = {
-    books: (Pick<Book, 'title'> & {
-        texts: Pick<Text, 'id' | 'title' | 'authors'>[]
-    })[]
+    books: BasicBook[]
 }
 
 export const ServerBookList = async () => {
@@ -33,7 +33,7 @@ export const ServerBookList = async () => {
     console.log(data);
     return (
         <div>
-            <h2>Wait</h2>
+            {data.books.map((book) => <BookCard key={book.id} book={book} />)}
         </div>
     );
 };
