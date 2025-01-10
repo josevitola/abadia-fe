@@ -24,7 +24,7 @@ type ClientTextProps = {
 }
 
 // inspired on https://medium.com/@sehrawy/how-to-set-up-nextjs-14-with-apollo-client-754a177e0a00
-export const ClientText = async ({ textId }: ClientTextProps) => {
+export const ServerText = async ({ textId }: ClientTextProps) => {
   const client = getClient();
 
   const { data } = await client.query<QueryTextTitleAndAuthorsByIdResponse>({
