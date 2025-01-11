@@ -11,7 +11,11 @@ const BookCard = ({ book }: BookCardProps) => {
             <div>
                 <strong>Texts included:</strong>
                 <ul>
-                    {book.texts.map((text) => <li key={text.id}>{text.title}, by {text.authors.map(({ name }) => name).join(', ')}</li>)}
+                    {book.texts.map((text) => (
+                        <li key={text.id}>
+                            <a href={`/texts/${text.id}`}>{text.title}</a>, by {text.authors.map(({ name }) => name).join(', ')}
+                        </li>
+                    ))}
                 </ul>
             </div>
         </>
