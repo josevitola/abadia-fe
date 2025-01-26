@@ -6,6 +6,8 @@ const Carousel = () => {
     return (
         <div className={styles.carousel}>
             <CarouselCard />
+            <CarouselCard />
+            <CarouselCard />
         </div>
     )
 }
