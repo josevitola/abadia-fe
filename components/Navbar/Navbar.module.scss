@@ -1,0 +1,16 @@
+/* inspired on https://uizard.io/templates/website-templates/book-store-website/ */
+
+.navbar {
+  background-color: #de5c1b;
+  width: 100vw;
+  padding: 10px 20px;
+  box-sizing: content-box;
+
+  .left {
+    font-size: 1.4em;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
