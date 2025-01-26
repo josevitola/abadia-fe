@@ -4,10 +4,14 @@ import { Alegreya } from "next/font/google";
 
 const alegreya = Alegreya({ subsets: ['latin'], weight: "700" });
 
-export const CarouselCard = () => {
+interface CarouselCardProps {
+    title: string;
+}
+
+export const CarouselCard = ({ title }: CarouselCardProps) => {
     return (
         <Card className={styles.carouselCard}>
-            <header style={alegreya.style}>Book 1</header>
+            <header style={alegreya.style}>{title}</header>
         </Card>
     )
 }

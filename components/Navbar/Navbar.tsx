@@ -7,9 +7,9 @@ const alegreya = Alegreya({ subsets: ['latin'], weight: "700" });
 
 export const Navbar = () => {
     return (
-        <nav style={alegreya.style} className={styles.navbar}>
+        <nav className={styles.navbar}>
             <div className={styles.left}>
-                <a href="/">
+                <a className={alegreya.className} href="/">
                     Abadía
                 </a>
             </div>

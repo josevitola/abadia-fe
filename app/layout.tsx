@@ -4,8 +4,7 @@ import "./globals.css";
 import { ApolloWrapper } from "@/lib/apollo/wrapper";
 import { Navbar } from "@/components/Navbar";
 
-const geistSans = Alegreya_Sans({
-  variable: "--font-alegreya-sans",
+const alegreyaSans = Alegreya_Sans({
   weight: "500",
 });
 
@@ -20,15 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable}`}>
-        <ApolloWrapper>
-          <div>
-            <Navbar />
-            {children}
-          </div>
-        </ApolloWrapper>
-      </body>
-    </html>
+    <>
+      <html lang="en">
+        <body style={{ ...alegreyaSans.style }}>
+          <ApolloWrapper>
+            <div>
+              <Navbar />
+              {children}
+            </div>
+          </ApolloWrapper>
+        </body>
+      </html>
+    </>
   );
 }
