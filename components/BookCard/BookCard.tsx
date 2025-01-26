@@ -1,4 +1,5 @@
 import { BasicBook } from "@/types"
+import styles from "./BookCard.module.scss";
 
 type BookCardProps = {
     book: BasicBook
@@ -6,7 +7,7 @@ type BookCardProps = {
 
 const BookCard = ({ book }: BookCardProps) => {
     return (
-        <>
+        <div className={styles.book}>
             <h2>{book.title}</h2>
             <div>
                 <strong>Texts included:</strong>
@@ -18,7 +19,7 @@ const BookCard = ({ book }: BookCardProps) => {
                     ))}
                 </ul>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -30,7 +30,6 @@ export const ServerBookList = async () => {
         query: GET_BOOK_INFO
     });
 
-    console.log(data);
     return (
         <div>
             {data.books.map((book) => <BookCard key={book.id} book={book} />)}

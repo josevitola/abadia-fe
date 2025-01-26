@@ -36,7 +36,6 @@ export const ServerText = async ({ textId }: ClientTextProps) => {
 
   const { title, authors } = data.textById ?? {};
 
-  console.log(authors);
   return (
     <div>
       <h1>{title}</h1>
