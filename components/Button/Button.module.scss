@@ -1,0 +1,13 @@
+@use '@/app/variables' as *;
+
+.button {
+  border: 1px solid $light;
+  color: $light;
+  background-color: $primary;
+  padding: 10px 20px;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

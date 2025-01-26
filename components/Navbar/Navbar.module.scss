@@ -1,10 +1,13 @@
+@use '@/app/variables' as *;
 /* inspired on https://uizard.io/templates/website-templates/book-store-website/ */
 
 .navbar {
-  background-color: #de5c1b;
+  background-color: $light;
   width: 100vw;
   padding: 10px 20px;
-  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .left {
     font-size: 1.4em;
