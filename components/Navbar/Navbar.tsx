@@ -2,7 +2,7 @@ import React from 'react'
 import { Alegreya } from 'next/font/google';
 import styles from './Navbar.module.scss';
 
-const alegreya = Alegreya({ subsets: ['latin'] });
+const alegreya = Alegreya({ subsets: ['latin'], weight: "700" });
 
 export const Navbar = () => {
     return (
