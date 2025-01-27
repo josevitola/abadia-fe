@@ -7,15 +7,17 @@ export const Select = (props: Props) => {
     return (
         <ReactSelect {...props}
             styles={{
-                control: (baseStyles) => {
-                    return ({
-                        ...baseStyles,
-                        borderRadius: 0,
-                        border: `1px solid ${Colors.LIGHTGRAY}`,
-                        backgroundColor: Colors.LIGHTGRAY,
-                        color: Colors.GRAY
-                    })
-                },
+                container: (baseStyles) => ({
+                    ...baseStyles,
+                    flex: '1 1 0px',
+                }),
+                control: (baseStyles) => ({
+                    ...baseStyles,
+                    borderRadius: 0,
+                    border: `1px solid ${Colors.LIGHTGRAY}`,
+                    backgroundColor: Colors.LIGHTGRAY,
+                    color: Colors.GRAY,
+                }),
             }} />
     )
 }

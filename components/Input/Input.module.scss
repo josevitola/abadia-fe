@@ -1,4 +1,4 @@
-@use '@/app/variables' as *;
+@use '@/styles/sass/variables' as *;
 /* inspired on https://uizard.io/templates/website-templates/book-store-website/ */
 
 .input {
@@ -8,6 +8,8 @@
   color: $gray;
   outline: none;
   font-size: 1em;
+  flex: 1 1 0px;
+  height: 38px;
 
   &:focus-visible,
   &:hover {
