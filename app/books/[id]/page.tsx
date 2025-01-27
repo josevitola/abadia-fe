@@ -25,13 +25,15 @@ export default async function BookIdPage({ params }: PageProps) {
                 </div>
                 <div>
                     <h3 style={serif700.style}>Este libro incluye:</h3>
-                    <ul>
+                    <ol>
                         {book.texts.map((text) =>
                             <li key={text.id}>
-                                <em>{text.title}</em>, por {text.authors.map((author) => author.name).join(', ')}
+                                <em>{text.title}</em>, por {text.authors.map((author) =>
+                                    <a href={`/author/${author.id}`}>{author.name}</a>)
+                                }
                             </li>
                         )}
-                    </ul>
+                    </ol>
                 </div>
             </main>
         </div>

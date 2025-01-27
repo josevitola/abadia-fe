@@ -1,4 +1,4 @@
-import { Book } from '@/types';
+import { Book, Human, Text } from '@/types';
 import { gql } from '@apollo/client';
 
 export const GET_BOOK_DETAIL = gql`
@@ -18,6 +18,7 @@ export const GET_BOOK_DETAIL = gql`
         id
         title
         authors {
+          id
           name
         }
       }
@@ -27,12 +28,6 @@ export const GET_BOOK_DETAIL = gql`
 
 export type GetBookDetailResponse = {
   book: Book & {
-    texts: {
-      id: string;
-      title: string;
-      authors: {
-        name: string;
-      }[];
-    }[];
+    texts: (Pick<Text, 'id' | 'title'> & { authors: Pick<Human, 'id' | 'name'>[] })[];
   };
 };
