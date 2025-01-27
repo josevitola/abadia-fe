@@ -1,4 +1,4 @@
-import { Human } from '@/types/models';
+import { Human, Text } from '@/types/models';
 import { gql } from '@apollo/client';
 
 export const GET_HUMAN_DETAIL = gql`
@@ -18,10 +18,16 @@ export const GET_HUMAN_DETAIL = gql`
       pseudonym
       dcr
       name
+      texts {
+        id
+        title
+      }
     }
   }
 `;
 
 export type GetHumanDetailResponse = {
-  human: Human;
+  human: Human & {
+    texts: Pick<Text, 'id' | 'title'>[];
+  };
 };

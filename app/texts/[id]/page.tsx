@@ -9,7 +9,9 @@ export default async function Home({ params }: PageProps) {
     const { id } = await params;
     return (
         <div className={styles.page}>
-            <ServerText textId={id.toString()} />
+            <main className={styles.main}>
+                <ServerText textId={id.toString()} />
+            </main>
         </div>
     );
 }

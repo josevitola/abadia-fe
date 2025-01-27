@@ -20,11 +20,18 @@ export default async function Home({ params }: PageProps) {
 
     return (
         <div className={styles.page}>
-            <h1 style={serif500.style}>{human.name}</h1>
-            <h3>({human.birthyear || 'desconocido'}-{human.deathyear})</h3>
-            <div>
-                <span>nacido en <strong>{human.country1.name}</strong></span>
-            </div>
+            <main className={styles.main}>
+                <h1 style={serif500.style}>{human.name}</h1>
+                <h3>({human.birthyear || 'desconocido'}-{human.deathyear})</h3>
+                <div>
+                    <span>nacido en <strong>{human.country1.name}</strong></span>
+                </div>
+
+                <h3>Textos:</h3>
+                <ul>
+                    {(human.texts.map(({ id, title }) => <li key={id}><a href={`/texts/${id}`}>{title}</a></li>))}
+                </ul>
+            </main>
         </div>
     );
 }
