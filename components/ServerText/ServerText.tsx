@@ -2,6 +2,7 @@ import { serif600, serif800 } from "@/fonts";
 import { getClient } from "@/lib/apollo/client";
 import { Book, Human, Text } from "@/types/models";
 import { gql } from "@apollo/client";
+import Link from "next/link";
 
 const GET_TEXT_DETAIL = gql`
   query ($id: String!) {
@@ -48,13 +49,13 @@ export const ServerText = async ({ textId }: ClientTextProps) => {
       <h1 style={serif800.style}>{title}</h1>
       <div>
         <strong>Escrito por: </strong>
-        <span>{authors.map(({ id, name }) => <a key={id} href={`/humans/${id}`}>{name}</a>)}</span>
+        <span>{authors.map(({ id, name }) => <Link key={id} href={`/humans/${id}`}>{name}</Link>)}</span>
       </div>
       <br />
       <div>
         <h3 style={serif600.style}>Aparece en:</h3>
         <ul>
-          {books.map(({ id, title }) => <li key={id}><a href={`/books/${id}`}>{title}</a></li>)}
+          {books.map(({ id, title }) => <li key={id}><Link href={`/books/${id}`}>{title}</Link></li>)}
         </ul>
       </div>
     </div>

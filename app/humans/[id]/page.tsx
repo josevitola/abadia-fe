@@ -2,10 +2,8 @@ import styles from "@/app/page.module.css";
 import { GET_HUMAN_DETAIL, GetHumanDetailResponse } from "./constants";
 import { getClient } from "@/lib/apollo/client";
 import { serif500 } from "@/fonts";
-
-type PageProps = {
-    params: Promise<{ id: string }>;
-}
+import { PageProps } from "@/types/ui";
+import Link from "next/link";
 
 export default async function Home({ params }: PageProps) {
     const { id } = await params;
@@ -29,7 +27,7 @@ export default async function Home({ params }: PageProps) {
 
                 <h3>Textos:</h3>
                 <ul>
-                    {(human.texts.map(({ id, title }) => <li key={id}><a href={`/texts/${id}`}>{title}</a></li>))}
+                    {(human.texts.map(({ id, title }) => <li key={id}><Link href={`/texts/${id}`}>{title}</Link></li>))}
                 </ul>
             </main>
         </div>

@@ -4,6 +4,7 @@ import { getClient } from "@/lib/apollo/client";
 import { PageProps } from "@/types/ui";
 import { GET_BOOK_DETAIL, GetBookDetailResponse } from "./constants";
 import { Button } from "@/components/Button";
+import Link from "next/link";
 
 export default async function BookIdPage({ params }: PageProps) {
     const { id } = await params;
@@ -29,9 +30,9 @@ export default async function BookIdPage({ params }: PageProps) {
                     <ol>
                         {book.texts.map((text) =>
                             <li key={text.id}>
-                                <em><a href={`/texts/${text.id}`}>{text.title}</a></em>, por&nbsp;
+                                <em><Link href={`/texts/${text.id}`}>{text.title}</Link></em>, por&nbsp;
                                 {text.authors.map((author) =>
-                                    <a href={`/humans/${author.id}`}>{author.name}</a>)
+                                    <Link href={`/humans/${author.id}`}>{author.name}</Link>)
                                 }
                             </li>
                         )}

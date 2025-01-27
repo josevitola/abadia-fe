@@ -1,6 +1,7 @@
 import { Card } from "@/components/Card"
 import styles from "./CarouselCard.module.scss";
 import { Alegreya } from "next/font/google";
+import Link from "next/link";
 
 const alegreya = Alegreya({ subsets: ['latin'], weight: "700" });
 
@@ -13,7 +14,7 @@ export const CarouselCard = ({ title, href }: CarouselCardProps) => {
     return (
         <Card className={styles.carouselCard}>
             <header style={alegreya.style}>
-                <a href={href}>{title}</a>
+                <Link href={href}>{title}</Link>
             </header>
         </Card>
     )
