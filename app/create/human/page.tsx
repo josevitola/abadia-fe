@@ -1,6 +1,5 @@
 import styles from "@/app/page.module.css";
-import { getClient } from "@/lib/apollo/client";
-import { serif500 } from "@/fonts";
+import { Input } from "@/components/Input";
 
 export default async function Home() {
 
@@ -8,6 +7,7 @@ export default async function Home() {
         <div className={styles.page}>
             <main className={styles.main}>
                 <h1>Crear humano</h1>
+                <Input placeholder="Nombre del humano" />
             </main>
         </div>
     );

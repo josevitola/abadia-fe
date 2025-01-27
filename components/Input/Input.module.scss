@@ -1,0 +1,14 @@
+@use '@/app/variables' as *;
+/* inspired on https://uizard.io/templates/website-templates/book-store-website/ */
+
+.input {
+  border: 1px solid $lightgray;
+  padding: 10px;
+  background-color: $lightgray;
+  color: $gray;
+  outline: none;
+
+  &:focus-visible {
+    border: 1px solid $gray;
+  }
+}

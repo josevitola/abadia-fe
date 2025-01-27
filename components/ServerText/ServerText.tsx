@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const GET_TEXT_DETAIL = gql`
   query ($id: String!) {
-    textById(id: $id) {
+    text(id: $id) {
       title
       authors {
         id
@@ -21,7 +21,7 @@ const GET_TEXT_DETAIL = gql`
 `;
 
 type GetTextDetailResponse = {
-  textById: Pick<Text, 'title'> & {
+  text: Pick<Text, 'title'> & {
     authors: Pick<Human, 'id' | 'name'>[];
     books: Pick<Book, 'id' | 'title'>[];
   }
@@ -42,7 +42,7 @@ export const ServerText = async ({ textId }: ClientTextProps) => {
     }
   });
 
-  const { title, authors, books } = data.textById ?? {};
+  const { title, authors, books } = data.text ?? {};
 
   return (
     <div>
