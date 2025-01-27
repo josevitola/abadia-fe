@@ -9,7 +9,7 @@ interface CarouselProps {
 const Carousel = ({ books }: CarouselProps) => {
     return (
         <div className={styles.carousel}>
-            {books.map((book) => <CarouselCard key={book.id} title={book.title} />)}
+            {books.map((book) => <CarouselCard key={book.id} href={`/books/${book.id}`} title={book.title} />)}
         </div>
     )
 }

@@ -6,12 +6,15 @@ const alegreya = Alegreya({ subsets: ['latin'], weight: "700" });
 
 interface CarouselCardProps {
     title: string;
+    href: string;
 }
 
-export const CarouselCard = ({ title }: CarouselCardProps) => {
+export const CarouselCard = ({ title, href }: CarouselCardProps) => {
     return (
         <Card className={styles.carouselCard}>
-            <header style={alegreya.style}>{title}</header>
+            <header style={alegreya.style}>
+                <a href={href}>{title}</a>
+            </header>
         </Card>
     )
 }

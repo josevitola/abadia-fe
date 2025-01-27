@@ -15,7 +15,7 @@ export const Navbar = () => {
             </div>
 
             <div>
-                <Button>Create book</Button>
+                <Button>Crear</Button>
             </div>
         </nav>
     )

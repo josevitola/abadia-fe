@@ -26,14 +26,9 @@ export default async function Home() {
 
   return (
     <div className={styles.page}>
+      <Carousel books={data.books} />
       <main className={styles.main}>
-        <Carousel books={data.books} />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        En desarrollo.
       </main>
     </div>
   );
