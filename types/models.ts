@@ -6,6 +6,11 @@ export type Text = {
   authors: Human[];
 };
 
+export type Country = {
+  iso31662: string;
+  name: string;
+};
+
 export type Human = {
   id: string;
   lastName: string;
@@ -13,6 +18,8 @@ export type Human = {
   name: string;
   country1Id: string;
   country2Id: string;
+  country1: Country;
+  country2: Country;
   birthyear: string;
   deathyear: string;
   pseudonym: string;

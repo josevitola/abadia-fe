@@ -1,4 +1,4 @@
-import { BasicBook } from "@/types"
+import { BasicBook } from "@/types/models"
 import styles from "./BookCard.module.scss";
 
 type BookCardProps = {

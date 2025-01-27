@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import Carousel from "@/components/Carousel/Carousel";
 import { getClient } from "@/lib/apollo/client";
 import { gql } from "@apollo/client";
-import { BasicBook } from "@/types";
+import { BasicBook } from "@/types/models";
 
 type QueryTextTitleAndAuthorsByIdResponse = {
   books: BasicBook[]

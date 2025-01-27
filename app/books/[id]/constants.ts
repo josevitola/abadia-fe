@@ -1,4 +1,4 @@
-import { Book, Human, Text } from '@/types';
+import { Book, Human, Text } from '@/types/models';
 import { gql } from '@apollo/client';
 
 export const GET_BOOK_DETAIL = gql`

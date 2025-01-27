@@ -1,5 +1,5 @@
 import { getClient } from "@/lib/apollo/client";
-import { BasicBook } from "@/types";
+import { BasicBook } from "@/types/models";
 import { gql } from "@apollo/client";
 import BookCard from "../BookCard/BookCard";
 

@@ -1,5 +1,5 @@
 import { getClient } from "@/lib/apollo/client";
-import { Human, Text } from "@/types";
+import { Human, Text } from "@/types/models";
 import { gql } from "@apollo/client";
 
 const GET_TEXT_TITLE_AND_AUTHORS_BY_ID = gql`

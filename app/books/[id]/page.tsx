@@ -2,7 +2,7 @@ import styles from "@/app/page.module.css";
 import { serif500, serif700 } from "@/fonts";
 import { getClient } from "@/lib/apollo/client";
 import { PageProps } from "@/types/ui";
-import { GET_BOOK_DETAIL, GetBookDetailResponse } from "./queries";
+import { GET_BOOK_DETAIL, GetBookDetailResponse } from "./constants";
 import { Button } from "@/components/Button";
 
 export default async function BookIdPage({ params }: PageProps) {
@@ -29,7 +29,7 @@ export default async function BookIdPage({ params }: PageProps) {
                         {book.texts.map((text) =>
                             <li key={text.id}>
                                 <em>{text.title}</em>, por {text.authors.map((author) =>
-                                    <a href={`/author/${author.id}`}>{author.name}</a>)
+                                    <a href={`/humans/${author.id}`}>{author.name}</a>)
                                 }
                             </li>
                         )}
