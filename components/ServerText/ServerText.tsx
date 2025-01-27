@@ -48,7 +48,7 @@ export const ServerText = async ({ textId }: ClientTextProps) => {
     <div>
       <h1 style={serif800.style}>{title}</h1>
       <div>
-        <strong>Escrito por: </strong>
+        escrito por&nbsp;
         <span>{authors.map(({ id, name }) => <Link key={id} href={`/humans/${id}`}>{name}</Link>)}</span>
       </div>
       <br />
